@@ -1,0 +1,80 @@
+/* //general stying for page  */
+* { box-sizing: border-box; }
+
+body { 
+  font-family: sans-serif;
+  background:rgb(133, 62, 66);
+  color:white;
+}
+
+/* //styling for Scene */
+.scene {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  perspective:600px;
+}
+
+.roll_dice{
+    background:black;
+    color:white;
+    border:none;
+    opacity: 0.90;
+    margin:auto 0;
+    font-size:1.5em;
+    margin-top:1em;
+    width:200px;
+}
+
+/* //styling for 3D Cube */
+.dice {
+    width:200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 1s;
+}
+
+/* //styling for 3D Cube transforms / animations on face select (on roll) */
+.dice.show-1  { transform: translateZ(-100px) rotateY(   0deg); }
+.dice.show-2  { transform: translateZ(-100px) rotateY(-180deg); }
+.dice.show-3  { transform: translateZ(-100px) rotateY( -90deg); }
+.dice.show-4   { transform: translateZ(-100px) rotateY(  90deg); }
+.dice.show-5   { transform: translateZ(-100px) rotateX( -90deg); }
+.dice.show-6 { transform: translateZ(-100px) rotateX(  90deg); }
+
+/* //universal style for cube faces  */
+.cube__face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 4px solid white;
+    line-height: 200px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+/* image setting */
+.face{
+    width: 100%;
+    height: 100%;
+}
+
+/* //individual styling for each numbers face  */
+.cube_face_one  { background: black;  opacity: 0.90;}
+.cube_face_three  { background: black;   opacity: 0.90; }
+.cube_face_two  {  background: black;   opacity: 0.90; }
+.cube_face_four  {  background: black;   opacity: 0.90; }
+.cube_face_five   {  background: black;   opacity: 0.90; }
+.cube_face_six {  background: black;  opacity: 0.90;}
+
+.cube_face_one  { transform: rotateY(  0deg) translateZ(100px); }
+.cube_face_two { transform: rotateY(180deg) translateZ(100px); }
+.cube_face_three { transform: rotateY( 90deg) translateZ(100px); }
+.cube_face_four  { transform: rotateY(-90deg) translateZ(100px); }
+.cube_face_five  { transform: rotateX( 90deg) translateZ(100px); }
+.cube_face_six { transform: rotateX(-90deg) translateZ(100px); }
+
+label { margin-right: 10px; }
