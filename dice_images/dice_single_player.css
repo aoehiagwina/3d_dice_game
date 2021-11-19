@@ -11,19 +11,33 @@ body {
 .scene {
   width: 200px;
   height: 200px;
-  margin: 20px;
+  margin-left: 35pc;
   perspective:600px;
 }
 
-.roll_dice{
+.player_buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.roll_dice1{
     background:black;
     color:white;
     border:none;
     opacity: 0.90;
-    margin:auto 0;
     font-size:1.5em;
-    margin-top:1em;
     width:200px;
+    margin-left: 20pc;
+}
+
+.roll_dice2{
+    background:black;
+    color:white;
+    border:none;
+    opacity: 0.90;
+    font-size:1.5em;
+    width:200px;
+    margin-right: 20pc;
 }
 
 /* //styling for 3D Cube */
@@ -34,6 +48,7 @@ body {
     transform-style: preserve-3d;
     transform: translateZ(-100px);
     transition: transform 1s;
+    
 }
 
 /* //styling for 3D Cube transforms / animations on face select (on roll) */
@@ -78,3 +93,76 @@ body {
 .cube_face_six { transform: rotateX(-90deg) translateZ(100px); }
 
 label { margin-right: 10px; }
+
+/* header */
+header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;
+}
+
+/* player1 Image */
+.players{
+    display: flex;
+    justify-content: space-between;
+}
+.set1{
+    padding: 0;
+    margin: 0;
+    height: 400px;
+    width: 300px;
+}
+.player1{
+    display: block;
+    margin-left: 7pc;
+    height: 80%;
+    width: 85%;
+}
+#player1_score{
+    margin-left: 9pc;
+    background: rgb(73, 49, 45);
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+}
+#player1_name{
+    margin-left: 9pc;
+    background: rgb(73, 49, 45);
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+}
+#gamer{
+    margin-left: 8pc;
+}
+
+/* player2 Image */
+.set2{
+    padding: 0;
+    margin-right: 5pc;
+    height: 400px;
+    width: 300px;
+    margin-top: 0;
+}
+.player2{
+    display: block;
+    margin-right: 7pc;
+    height: 80%;
+    width: 85%;
+}
+#player2_score{
+    margin-left: 2pc;
+    background: rgb(73, 49, 45);
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+}
+#player2_name{
+    margin-left: 2pc;
+    background: rgb(73, 49, 45);
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+}
+#gamer2{
+    margin-right: 0;
+}
